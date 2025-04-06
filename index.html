@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قائمة المهام</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <h2>قائمة المهام</h2>
+      <input type="text" id="taskInput" placeholder="أضف مهمة جديدة" />
+      <button id="createBtn" onclick="addTask()">إضافة<i class="fa-solid fa-plus"></i></button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
