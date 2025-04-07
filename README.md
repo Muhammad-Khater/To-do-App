@@ -15,13 +15,16 @@ Task Manager Preview
 📱 Responsive design
 
 
+
 🛠️ Tech Stack
 HTML/CSS/JavaScript
 localStorage API
 Font Awesome icons
 
+
 🚀 Quick Start
 Type task and click Add
+
 
 ✏️ Edit with pencil icon
 
