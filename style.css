@@ -1,4 +1,4 @@
-/* 🔹 ضبط الخط والخلفية العامة */
+/* 🔹 Grundlegende Einstellungen */
 body {
     font-family: 'Tajawal', sans-serif;
     background-color: #f4f4f4;
@@ -8,28 +8,27 @@ body {
     height: 100vh;
     margin: 0;
     position: relative;
-    direction: rtl;
-  }
-  
-  /* 🔹 حاوية المهام */
-  .todo-container {
+    direction: ltr;
+}
+
+/* 🔹 Hauptcontainer für die Aufgaben */
+.todo-container {
     background: white;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 500px;
-    /* max-width: 300px; */
     text-align: center;
-  }
-  
-  /* 🔹 العنوان */
-  h2 {
+}
+
+/* 🔹 Überschrift */
+h2 {
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  /* 🔹 حقل إدخال المهمة */
-  #taskInput {
+}
+
+/* 🔹 Eingabefeld für neue Aufgaben */
+#taskInput {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
@@ -37,13 +36,14 @@ body {
     border-radius: 5px;
     outline: none;
     transition: 0.3s;
-  }
-  #taskInput:focus {
+}
+
+#taskInput:focus {
     border-color: #28a745;
-  }
-  
-  /* 🔹 زر الإضافة */
-  button {
+}
+
+/* 🔹 Button zum Hinzufügen */
+button {
     padding: 10px 15px;
     background: #28a745;
     color: white;
@@ -52,23 +52,24 @@ body {
     border-radius: 5px;
     font-size: 16px;
     transition: 0.3s;
-  }
-  button:hover {
+}
+
+button:hover {
     background: #218838;
-  }
-  
-  /* 🔹 قائمة المهام */
-  ul {
+}
+
+/* 🔹 Aufgabenliste */
+ul {
     list-style: none;
     padding: 0;
     max-height: 400px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #28a745 #f4f4f4;
-  }
-  
-  /* 🔹 عناصر المهام */
-  li {
+}
+
+/* 🔹 Einzelne Aufgaben */
+li {
     background: #f9f9f9;
     padding: 12px 15px;
     margin: 8px 0;
@@ -77,24 +78,26 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: 0.3s;
-  }
-  li:hover {
+}
+
+li:hover {
     background: #e8f5e9;
-  }
-  
-  /* 🔹 تخطيط المهمة */
-  li div {
+}
+
+/* 🔹 Layout der Aufgaben (Text + Checkbox) */
+li div {
     display: flex;
     gap: 12px;
     align-items: center;
-  }
-  li div p {
+}
+
+li div p {
     font-size: 18px;
     margin: 0;
-  }
-  
-  /* 🔹 تصميم مربع التحديد */
-  .checkbox {
+}
+
+/* 🔹 Checkbox-Stil */
+.checkbox {
     appearance: none;
     width: 18px;
     height: 18px;
@@ -105,13 +108,13 @@ body {
     cursor: pointer;
     background-color: white;
     transition: 0.3s;
-  }
-  
-  .checkbox:checked {
+}
+
+.checkbox:checked {
     background-color: #28a745;
-  }
-  
-  .checkbox:checked::after {
+}
+
+.checkbox:checked::after {
     content: '✔';
     color: white;
     font-size: 14px;
@@ -120,17 +123,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  
-  /* 🔹 خط يتوسط النص عند اكتمال المهمة */
-  .checkbox:checked ~ p {
+}
+
+/* Durchgestrichener Text bei erledigten Aufgaben */
+.checkbox:checked ~ p {
     text-decoration: line-through;
     color: #888;
-  }
-  
-  /* 🔹 أزرار التحديث والحذف */
-  .update,
-  .delete {
+}
+
+/* 🔹 Bearbeiten- und Löschen-Buttons */
+.update,
+.delete {
     padding: 5px 8px;
     color: white;
     border: none;
@@ -138,20 +141,26 @@ body {
     border-radius: 5px;
     font-size: 14px;
     transition: 0.3s;
-  }
-  .update {
+}
+
+.update {
     background: #007bff;
-  }
-  .update:hover {
+}
+
+.update:hover {
     background: #0056b3;
-  }
-  .delete {
+}
+
+.delete {
     background: red;
-  }
-  .delete:hover {
+}
+
+.delete:hover {
     background: darkred;
-  }
-  .alertBox {
+}
+
+/* 🔹 Benachrichtigungs-Box */
+.alertBox {
     width: 320px;
     padding: 15px;
     display: flex;
@@ -170,43 +179,44 @@ body {
     font-weight: bold;
     color: #333;
     animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  /* ألوان حسب نوع التنبيه */
-  .alertBox.success {
+}
+
+.alertBox.success {
     border-left: 6px solid #28a745;
     background: #e8f5e9;
     color: #155724;
-  }
-  .alertBox.error {
+}
+
+.alertBox.error {
     border-left: 6px solid red;
     background: #f8d7da;
     color: #721c24;
-  }
-  .alertBox.warning {
-    border-left: 6px solid #9f6000;
-    background: #fff4e5;
-    color: #9f6000;
-  }
-  
-  /* زر إغلاق التنبيه */
-  .alertBox .close-btn {
+}
+
+.alertBox.warning {
+    border-left: 6px solid #e65100;
+    background: #fff3e0;
+    color: #bf360c;
+}
+
+/* Schließen-Button für Alerts */
+.alertBox .close-btn {
     background: transparent;
     border: none;
     font-size: 20px;
     cursor: pointer;
     color: inherit;
     font-weight: bold;
-  }
-  
-  /* تأثير الظهور */
-  @keyframes fadeIn {
+}
+
+/* Animation für einblendende Alerts */
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-10px);
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
     }
     to {
-      opacity: 1;
-      transform: translateX(-50%);
+        opacity: 1;
+        transform: translateX(-50%);
     }
-  }
+}
