@@ -3,11 +3,17 @@ Task Manager Preview
 (Replace with actual screenshot)
 
 ✨ Features
+
 ✅ Add, edit, delete tasks
+
 💾 Auto-save to browser storage
+
 🔔 Visual alerts for actions
+
 ✔️ Mark tasks as complete
+
 📱 Responsive design
+
 
 🛠️ Tech Stack
 HTML/CSS/JavaScript
